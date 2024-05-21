@@ -6,8 +6,24 @@ authors = ["Vladimir Dyakov <diakov.va@phystech.edu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.11"
+jupyter = "^1.0.0"
+torch = { version = "1.11.0+cu113", source="torch"}
+fastnlp = "1.0.1"
+transformers = "^4.41.0"
+llvmlite = "0.38.1"
+numba = "0.55.2"
+sparse = "0.13.0"
+adjusttext = "^1.1.1"
+pandas = "^2.2.2"
+spacy = "^3.7.4"
+pyvis = "^0.3.2"
 
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu113"
+default = false
+secondary = true
 
 [build-system]
 requires = ["poetry-core"]
